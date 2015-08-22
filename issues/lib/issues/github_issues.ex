@@ -20,8 +20,6 @@ defmodule Issues.GithubIssues do
 
   def handle_response({:ok, response_struct}) do
     Logger.info "Successful response"
-    response_struct.body |> inspect |> Logger.error
-
     {:ok, response_struct.body}
   end
 
